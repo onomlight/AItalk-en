@@ -1,0 +1,613 @@
+@charset "utf-8";
+@font-face {
+  font-family: "Noto Sans KR";
+
+  src: url(../font/NotoSansKR-Regular.otf),
+    url(../font/NotoSansKR-Regular.otf) format("opentype");
+}
+/* padding-top: 56.25px; */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  padding-top: 3.515625rem;
+  box-sizing: border-box;
+  background: #fff;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+button {
+  font-family: "Noto Sans KR", sans-serif;
+}
+input:focus {
+  outline: none;
+}
+
+/* font-family: 'Nanum Gothic', sans-serif; */
+
+/* 네비게이션 */
+.nav {
+  width: 100%;
+  height: 3.515625rem;
+  background: #fff;
+  border-bottom: 4px solid #e0e4e9;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0 1.109375rem 0 0.9375rem;
+}
+.nav_text_box {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_text_box em {
+  font-weight: 600;
+  color: #0e0e0e;
+}
+
+/* 네비 채팅 */
+.nav_text_box .title_wrap {
+  text-align: center;
+  margin: 0.75rem 1.765625rem 0 0;
+}
+.nav_text_box .title_text {
+  font-size: 0.9375rem;
+  line-height: 0.3125rem;
+  letter-spacing: -0.125rem;
+}
+
+/* 네비 설정 */
+.nav_text_box .setting_wrap {
+  text-align: right;
+  margin-top: 0.859375rem;
+}
+.nav_text_box .setting_text {
+  font-size: 0.78125rem;
+  letter-spacing: -0.125rem;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* 네비 친구찾기,친구추가 */
+.nav_text_box .right_grub {
+  display: flex;
+  align-items: center;
+}
+.nav_text_box .friend_add {
+  margin-right: 0.71875rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.78125rem;
+  /* line-height: 0.3125rem; */
+  margin-right: 1.109375rem;
+  letter-spacing: -0.0625rem;
+  cursor: pointer;
+}
+.nav_text_box .friend_add i {
+  font-size: 0.40625rem;
+  margin-right: 0.15625rem;
+  margin-top: 0.15rem;
+}
+
+/* 네비 화살표 아이콘 */
+.nav_text_box .arrow_wrap {
+  margin-top: 0.75rem;
+}
+.arrow_icon_box {
+  height: 1.875rem;
+  position: relative;
+}
+.arrow_icon_box .arrow_icon {
+  width: 0.515625rem;
+  height: 0.90625rem;
+  background: url(../img/icon/arrow_left.png) center center;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* 네비 채팅방 타이틀 */
+.nav_text_box .chatting_title {
+  font-size: 0.9375rem;
+  margin-right: 2.1875rem;
+}
+/* 내 프로필 */
+.my-profile_name {
+  font-size: 0.915625rem;
+  line-height: 2.875rem;
+  font-weight: 600;
+  color: #0e0e0e;
+}
+
+/* 프로필 */
+.profile {
+  display: flex;
+  /* padding: 0.78125rem 0 0.78125rem; */
+  box-sizing: border-box;
+}
+.profile .profile_img {
+  width: 3.671875rem;
+  height: 3.671875rem;
+  border-radius: 50%;
+  background: #ccc;
+  overflow: hidden;
+}
+.profile .profile_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.myprofile_img {
+  width: 3.671875rem;
+  height: 3.671875rem;
+  border-radius: 50%;
+  background: #ccc;
+  overflow: hidden;
+}
+.myprofile_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile .profile_name {
+  margin: 0 0 0 0.78125rem;
+  max-width: calc(100% - 77px);
+  min-width: 128px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.profile .profile_name em {
+  font-size: 0.915625rem;
+  line-height: 0.875rem;
+  font-weight: 600;
+  color: #0e0e0e;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 17px;
+}
+.profile .profile_name p {
+  font-size: 0.78125rem;
+  /* line-height: 0.703125rem; */
+  font-weight: 300;
+  color: #8d8d8d;
+  margin-top: 1.09375rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 친구 목록 */
+.friend_list {
+  min-height: 100%;
+}
+.friend_list .profile {
+  padding: 0.34375rem 0;
+}
+
+/* 푸터 네비게이션 */
+.footer_nav {
+  width: 100%;
+  height: 5.46875rem;
+  background: #fff;
+  border-top: 0.0625rem solid #e0e4e9;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  box-sizing: border-box;
+}
+.footer_nav ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_nav ul a {
+  width: 25%;
+  width: 33%;
+  height: 100%;
+  cursor: pointer;
+  cursor: none;
+}
+.footer_nav ul li {
+  width: 100%;
+}
+.footer_nav ul li .icon_box {
+  width: 100%;
+  margin-top: 0.9375rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer_nav ul li .icon_box .icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  overflow: hidden;
+  padding: 0.15625rem;
+  box-sizing: border-box;
+  position: relative;
+}
+.footer_nav ul li .icon_box .icon i {
+  font-size: 1.25rem;
+  position: absolute;
+  bottom: 0.15625rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #d7d7d7;
+}
+.footer_nav ul a li .icon_box .icon .image {
+  width: 1.84375rem;
+  height: 1.84375rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s;
+}
+.footer_nav ul li .icon_box .icon_text {
+  width: 100%;
+  font-size: 0.796875rem;
+  font-weight: 300;
+}
+.footer_nav ul a.active li .icon_box .icon_text,
+.footer_nav ul a:hover li .icon_box .icon_text {
+  color: #f5c119;
+}
+
+/* 푸터 네비 아이콘 이미지 변경 */
+.footer_nav ul a:nth-child(1) li .icon_box .icon .image {
+  background: url(../img/footer_icon/menu_home_off.png) center center;
+  background-size: cover;
+}
+.footer_nav ul a:nth-child(2) li .icon_box .icon .image {
+  background: url(../img/footer_icon/talk-off.png) center center;
+
+  background-size: cover;
+}
+.footer_nav ul a:nth-child(3) li .icon_box .icon .image {
+  background: url(../img/footer_icon/menu_talk_off.png) center center;
+
+  background-size: cover;
+}
+.footer_nav ul a:nth-child(4) li .icon_box .icon .image {
+  background: url(../img/footer_icon/menu_sns_off.png) center center;
+  background-size: cover;
+}
+.footer_nav ul a:nth-child(5) li .icon_box .icon .image {
+  background: url(../img/footer_icon/menu_user_off.png) center center;
+  background-size: cover;
+}
+
+/* 푸터 네비 아이콘 마우스 오버시 색상 변경 */
+.footer_nav ul a:nth-child(1):hover li .icon_box .icon .image,
+.footer_nav ul a:nth-child(1).active li .icon_box .icon .image,
+.footer_nav ul a:nth-child(1):focus li .icon_box .icon .image {
+  background: url(../img/footer_icon/menu_home_on.png) center center;
+  background-size: cover;
+}
+.footer_nav ul a:nth-child(2):hover li .icon_box .icon .image,
+.footer_nav ul a:nth-child(2).active li .icon_box .icon .image,
+.footer_nav ul a:nth-child(2):focus li .icon_box .icon .image {
+  background: url(../img/footer_icon/talk-on.png) center center;
+
+  background-size: cover;
+}
+.footer_nav ul a:nth-child(3):hover li .icon_box .icon .image,
+.footer_nav ul a:nth-child(3).active li .icon_box .icon .image,
+.footer_nav ul a:nth-child(3):focus li .icon_box .icon .image {
+  background: url(../img/footer_icon/menu_talk_on.png) center center;
+
+  background-size: cover;
+}
+.footer_nav ul a:nth-child(4):hover li .icon_box .icon .image,
+.footer_nav ul a:nth-child(4).active li .icon_box .icon .image,
+.footer_nav ul a:nth-child(4):focus li .icon_box .icon .image {
+  background: url(../img/footer_icon/menu_sns_on.png) center center;
+  background-size: cover;
+}
+.footer_nav ul a:nth-child(5):hover li .icon_box .icon .image,
+.footer_nav ul a:nth-child(5).active li .icon_box .icon .image,
+.footer_nav ul a:nth-child(5):focus li .icon_box .icon .image {
+  background: url(../img/footer_icon/menu_user_on.png) center center;
+  background-size: cover;
+}
+
+/* 채팅,초대 버튼 style */
+.profile .btn_wrap {
+  display: flex;
+}
+.profile .btn_wrap .btn {
+  font-size: 0.859375rem;
+  letter-spacing: -0.03125rem;
+  min-width: 3.890625rem;
+  height: 2.90625rem;
+  box-sizing: border-box;
+  border-radius: 0.15625rem;
+  margin-left: 0.125rem;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  border: solid 0.046875rem;
+}
+.profile .btn_wrap .btn:nth-child(1) {
+  margin-left: 0rem;
+}
+
+/* 버튼 색깔 */
+.profile .btn_wrap .btn.btn1 {
+  color: #f6c016;
+  border-color: #f6c016;
+}
+.profile .btn_wrap .btn.btn2 {
+  color: #1670f6;
+  border-color: #1670f6;
+}
+.profile .btn_wrap .btn.btn3 {
+  color: #ed5d86;
+  border-color: #ed5d86;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile .btn_wrap .btn.btn33 {
+  color: #ed5d86;
+  border-color: #ed5d86;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 5.15625rem;
+}
+
+.profile .btn_wrap .btn.btn3 i {
+  font-size: 0.546875rem;
+  margin-right: 0.1875rem;
+}
+.profile .btn_wrap .btn.btn4 {
+  background: #f6c016;
+  border-color: #f6c016;
+  color: #fff;
+}
+.profile .btn_wrap .btn.btn5 {
+  min-width: 5.15625rem;
+  border-color: #1670f6;
+  color: #1670f6;
+}
+.profile .btn_wrap .btn.btn6 {
+  background: #f61636;
+  border-color: #f61636;
+  color: #fff;
+}
+.profile .btn_wrap .btn.btn7 {
+  background: #9e9e9e;
+  border-color: #9e9e9e;
+  color: #fff;
+}
+.profile .btn_wrap .btn.invtiebtn {
+  min-width: 5.15625rem;
+  border-color: #61A98B;
+  color: #61A98B;
+}
+/* 가로 라인 */
+.line1 {
+  display: block;
+  width: 100%;
+  height: 0.0625rem;
+  margin: 0.859375rem 0;
+  box-sizing: border-box;
+  background: #e0e4e9;
+}
+
+/* 채팅,설정 버튼 클릭시 새로운 채팅 설정창  */
+.new_chatting_container {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  align-items: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.8);
+}
+.new_chatting_container.active {
+  display: flex;
+}
+.new_chatting {
+  width: 100%;
+  background: #fff;
+  border-radius: 1rem 1rem 0 0;
+  padding: 16px 15px 35px;
+  box-sizing: border-box;
+  /* height: 60%; */
+}
+.new_chatting .title {
+  position: relative;
+}
+.new_chatting .title .close {
+  width: 9.5px;
+  height: 9.5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: url(../img/icon/close.png) center center;
+  background-size: cover;
+  cursor: pointer;
+}
+.new_chatting .title h2 {
+  width: 100%;
+  font-size: 16.25px;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: -1.63px;
+}
+
+/* 채팅방 이름 설정 */
+.new_chatting .chatting_name {
+  margin-top: 12.5px;
+  text-align: center;
+}
+.new_chatting .chatting_name input {
+  width: 77%;
+  height: 37.5px;
+  font-size: 13.75px;
+  line-height: 20px;
+  letter-spacing: -1.38px;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+.new_chatting .chatting_name input::placeholder {
+  color: #d1d1d1;
+}
+
+/* 채팅방 시간 설정 */
+.new_chatting .chatting_time {
+  margin: 18.75px 0 20px;
+}
+.new_chatting .chatting_time h2 {
+  font-size: 13.75px;
+  line-height: 20px;
+  letter-spacing: -1.38px;
+}
+.new_chatting em {
+  /* font-size: 11.25px; */
+  font-size: 0.9375rem;
+  line-height: 20px;
+  letter-spacing: -1.13px;
+  font-weight: 400;
+}
+
+.new_chatting .set_time {
+  width: 150px;
+  height: 30.5px;
+  margin: 10px 0 12.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12.5px;
+  box-sizing: border-box;
+  background: #fffcc7;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+  position: relative;
+}
+.new_chatting .set_time.active {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.new_chatting .set_time p {
+}
+.new_chatting .set_time .bottom_icon {
+  width: 11.75px;
+  height: 10.25px;
+  background: url(../img/icon/bottom.png) center center;
+  background-size: cover;
+  pointer-events: none;
+}
+
+/* 채팅방 시간 리스트 */
+.new_chatting .set_time .time_list {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+.new_chatting .set_time.active .time_list {
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.new_chatting .set_time .time_list ul {
+  width: 100%;
+  height: 100%;
+}
+.new_chatting .set_time .time_list ul li {
+  width: 100%;
+  height: 30.5px;
+  line-height: 30.5px;
+  padding: 0 12.5px;
+  box-sizing: border-box;
+  background: #fff;
+}
+.new_chatting .set_time .time_list ul li:hover {
+  background: #fffcc7;
+}
+.new_chatting .set_time .time_list ul li p {
+}
+
+/* 채팅방 만들기 버튼 */
+ 
+.chatting_add button {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 7.5px;
+  border: 1px solid #61A98B;
+  cursor: pointer;
+}
+.chatting_add button .plus_icon {
+  width: 8.25px;
+  height: 8.5px;
+  background: url(../img/icon/plus.png) center center;
+  background-size: cover;
+  margin-right: 3px;
+}
+.chatting_add button em {
+  font-size: 16.25px;
+  line-height: 20px;
+  letter-spacing: -1.63px;
+  color: #61A98B;
+  font-weight: 500;
+}
+/* 이름변경 */
+.renamebtn {
+  width: 4rem;
+  height: 2.3rem;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 7.5px;
+  font-style: normal;
+  font-family: NotoSansCJKkr;
+  letter-spacing: -1.38px;
+  cursor: pointer;
+  color: #ffffff;
+  
+  
+  background-color: #61A98B;
+}
+
+/* 채팅방 배경화면 알림음 크기 */
+.chatting_backimg {
+  padding: 1rem 0 1rem 0;
+}
+
+.chatting_alert {
+  padding: 1rem 0 3rem 0;
+}
+
+.deletemsg {
+  position: fixed;
+  left: 11.5rem;
+}
+
+.chatting_line {
+  margin-top: 1rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  border-bottom: 5px solid #dadada;
+}

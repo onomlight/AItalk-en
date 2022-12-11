@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+    <nav class="nav main">
+        <div class="nav_text_box">
+            <div class="arrow_wrap">
+                <a href="index.html" class="arrow_icon_box">
+              <div class="arrow_icon "></div>
+            </a>    
+          </div>
+          <div class="nav_title">채팅방</div>
+          <div class="setting_wrap">
+            <div class="right_grub">
+                <button class="setting_text setting" onclick="tsetting()">설정</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="section-chatting section main green">
+        <ul class="chat-content">
+          <li class="chat-box">
+            <div class="user">
+              <div class="user_img profile_img">
+                <img
+                  src="../img/KakaoTalk_20220818_170717598.png"
+                  alt="테스트 이미지"
+                />
+              </div>
+              <div class="message_wrap">
+                <div class="user_name">
+                  <em>Meow</em>
+                </div>
+                <div class="message green">
+                  <p>
+                    시곌 보며 속삭이는 비밀들
+                    간절한 내 맘속 이야기
+                    지금 내 모습을 해쳐도 좋아
+                    나를 재촉하면 할수록 좋아
+                    내 이름 불러줘
+                  </p>
+                 
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <div class="alert">
+            <p>내용을 변경하였습니다</p>
+          </div>
+         
+          <li class="chat-box mine">
+            <div class="user my_user">
+              <div class="message_wrap">
+                <div class="message">
+                   <p>
+                    손 틈새로 비치는 내 맘 들킬까 두려워
+                    가슴이 막 벅차 서러워
+                    조금만 꼭 참고 날 기다려줘
+                    너랑 나랑은 지금 안되지
+                    시계를 더 보채고 싶지만
+                    네가 있던 미래에서
+                    내 이름을 불러줘
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="chat-box">
+            <div class="user">
+              <div class="user_img profile_img">
+                <img
+                  src="../img/KakaoTalk_20220818_170717598.png"
+                  alt="테스트 이미지"
+                />
+              </div>
+              <div class="message_wrap">
+                <div class="user_name">
+                  <em>Meow</em>
+                </div>
+                <div class="message green">
+                  <p>
+                    내가 먼저 엿보고 온 시간들
+                    너와 내가 함께였었지
+                    나랑 놀아주는 그대가 좋아
+                    내가 물어보면 그대도 좋아
+                    내 이름이 뭐야
+                  </p>
+                 
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <div class="alert">
+            <p>현재 AI 말투를 고민하여 영어로만 사용이 가능합니다.</p>
+          </div>
+         
+          <li class="chat-box mine">
+            <div class="user my_user">
+              <div class="message_wrap">
+                <div class="message">
+                   <p>
+                   
+                    눈 깜박하면 어른이 될 거예요
+                    날 알아보겠죠 그댄 기억하겠죠
+                    그래 기묘했던 아이
+                    손 틈새로 비치는 네 모습 참 좋다
+
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+    </div>
+
+    <div class="chatting_input_wrap">
+        <form action="" id="chatInput">
+          <div class="chatting_input_plusicon">+</div>
+          <input id="input" type="text" placeholder="메세지를 입력하세요!" />
+          <button class="inputBtn"  id="send">전송</button>
+        </form>
+         
+       
+      </div>
+      <script type="module">
+        //  AI 답변란
+
+import { Configuration, OpenAIApi } from 'https://cdn.skypack.dev/openai';
+
+    document.querySelector('#send').addEventListener('click', function(){
+      // 내가 보내는 란
+      
+      var template = `
+      <li class="chat-box mine">
+            <div class="user my_user">
+              <div class="message_wrap">
+                <div class="message">
+                    ${ document.querySelector('#input').value }
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+      `
+      document.querySelector('.chat-content').insertAdjacentHTML('beforeend', template);
+
+      
+
+      const configuration = new Configuration({
+        apiKey: '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',
+      });
+      const openai = new OpenAIApi(configuration);
+
+      openai.createCompletion({
+        model: "text-davinci-002",
+        prompt: document.querySelector('#input').value,
+        temperature: 0.7,
+        max_tokens: 256,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0,
+      }).then((result)=>{
+        console.log(result.data.choices[0].text)
+        //  AI 답변란
+        var template = `
+        <li>
+          <div class="user">
+            <div class="user_img profile_img">
+              <img
+                src="../img/KakaoTalk_20220818_170717598.png"
+                alt="테스트 이미지"
+              />
+            </div>
+            <div class="message_wrap">
+              <div class="user_name">
+                <em>Meow</em>
+              </div>
+              <div class="message green">
+                <p>${ result.data.choices[0].text }</p>
+                
+              </div>
+            </div>
+          </div>
+        </li>
+        `
+        document.querySelector('.chat-content').insertAdjacentHTML('beforeend', template);
+      })
+
+    })
+    </script>
+  
+
+</body>
+</html>

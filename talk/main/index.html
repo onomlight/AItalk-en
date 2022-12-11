@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 ,user-scalable=no"
+    />
+    <title>Meow Messenger</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet"
+      href="../css/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- <main class="main nav"> -->
+    <nav class="nav main">
+      <div class="nav_text_box">
+        <div class="title_wrap"><em class="title_text">채팅</em></div>
+        <div class="arrow_wrap dis-none">
+          <a href="#" class="arrow_icon_box">
+            <div class="arrow_icon "></div>
+          </a>
+        </div>
+        <div class="nav_title"><span></span></div>
+        <div class="setting_wrap">
+          
+          <div class="right_grub">
+            <div class="friend_add" onclick="invite()">
+              <span class="friend_addicon">+</span><em>친구초대</em>
+            </div>
+            <button  class="setting_text setting" onclick="tsetting()">설정</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section-main section">
+      <div class="profile mg-10">
+        <div class="myprofile_img" onclick="myclick()">
+          <a >
+            <img src="../img/user/12.jpg" alt="테스트 이미지" />
+          </a>
+        </div>
+        <div class="my-profile_name">
+          <em>정가을</em>
+        </div>
+      </div>
+      <div class="friend_search">
+        <form action="#">
+          <input
+            class="friend_search_input"
+            type="text"
+            placeholder="친구검색"
+          />
+          <button></button>
+        </form>
+      </div>
+      <div class="friend_wrap">
+        <!-- AI 이동 -->
+        <div class="friend_birthday">
+          <div class="friend_title">
+            <p>Meow과 대화하기</p>
+          </div>
+          <button ><a href="AI.html">이동하기</a></button>
+
+          <div class="friend_birthday-wrap">
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                  <img src="../img/KakaoTalk_20220818_170717598.png" alt="테스트 이미지" >
+                  </div>
+                <div class="profile-name">
+                  <span>Meow</span>
+                </div>
+              </div>
+            </div>
+      
+        
+          </div>
+        </div>
+        <!--NEW 즐겨찾기 -->
+        <div class="friend_favorites">
+          <div class="friend_title">
+            <p>즐겨찾기</p>
+          </div>
+
+          <div class="friend_birthday-wrap">
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                 
+                  <img src="../img/user/17.jpg" alt="테스트 이미지" />
+                
+                </div>
+                <div class="profile-name">
+                  <span>모모</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                
+                  <img src="../img/user/18.jpg" alt="테스트 이미지" />
+                
+                </div>
+                <div class="profile-name">
+                  <span>LuLu</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                  <!-- <a href="../userProfile/index.html"> -->
+                  <img src="../img/user/19.jpg" alt="테스트 이미지" />
+                  <!-- </a> -->
+                </div>
+                <div class="profile-name">
+                  <span>지미나</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                  <!-- <a href="../userProfile/index.html"> -->
+                  <img src="../img/user/20.jpg" alt="테스트 이미지" />
+                  <!-- </a> -->
+                </div>
+                <div class="profile-name">
+                  <span>숙</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                  <!-- <a href="../userProfile/index.html"> -->
+                  <img src="../img/user/21.jpg" alt="테스트 이미지" />
+                  <!-- </a> -->
+                </div>
+                <div class="profile-name">
+                  <span>토마토좋아</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                  <!-- <a href="../userProfile/index.html"> -->
+                  <img src="../img/user/22.jpg" alt="테스트 이미지" />
+                  <!-- </a> -->
+                </div>
+                <div class="profile-name">
+                  <span>구미호</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                  <!-- <a href="../userProfile/index.html"> -->
+                  <img src="../img/user/23.jpg" alt="테스트 이미지" />
+                  <!-- </a> -->
+                </div>
+                <div class="profile-name">
+                  <span>구미호</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                  <!-- <a href="../userProfile/index.html"> -->
+                  <img src="../img/user/24.jpg" alt="테스트 이미지" />
+                  <!-- </a> -->
+                </div>
+                <div class="profile-name">
+                  <span>구미호</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                  <!-- <a href="../userProfile/index.html"> -->
+                  <img src="../img/user/7.jpg" alt="테스트 이미지" />
+                  <!-- </a> -->
+                </div>
+                <div class="profile-name">
+                  <span>구미호</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 단체톡방 -->
+        <div class="friend_party">
+          <div class="friend_title">
+            <p>단체톡방</p>
+          </div>
+
+          <div class="friend_party-wrap">
+            <div class="friend_party-profile">
+              <div class="friend_party-profile_wrap">
+                <!-- <a href="../chatting/index.html"> -->
+                <div class="friend_party-profile_img">
+                  <img src="../img/user/1.jpg" alt="테스트 이미지" />
+                  <img src="../img/user/2.jpg" alt="테스트 이미지" />
+                  <img src="../img/user/3.jpg" alt="테스트 이미지" />
+                  <img src="../img/user/4.jpg" alt="테스트 이미지" />
+                </div>
+                <div class="profile-name">
+                  <span>딸기나라</span>
+                </div>
+                <!-- </a> -->
+              </div>
+
+            </div>
+
+            <div class="friend_party-profile">
+              <div class="friend_party-profile_wrap">
+                <!-- <a href="../chatting/index.html"> -->
+                <div class="friend_party-profile_img">
+                  <img src="../img/user/23.jpg" alt="테스트 이미지" />
+                  <img src="../img/user/24.jpg" alt="테스트 이미지" />
+                  <img src="../img/user/22.jpg" alt="테스트 이미지" />
+                  <img src="../img/user/21.jpg" alt="테스트 이미지" />
+                </div>
+                <div class="profile-name">
+                  <span>Luna, B플러스, 모모, 트외이스</span>
+                </div>
+                <!-- </a> -->
+              </div>
+            </div>
+            <div class="friend_party-profile">
+              <div class="friend_party-profile_wrap">
+                <!-- <a href="../chatting/index.html"> -->
+                <div class="friend_party-profile_img">
+                  <img src="../img/user/25.jpg" alt="테스트 이미지" />
+                  <img src="../img/user/26.jpg" alt="테스트 이미지" />
+                  <img src="../img/user/27.jpg" alt="테스트 이미지" />
+                  <img src="../img/user/28.jpg" alt="테스트 이미지" />
+                </div>
+                <div class="profile-name">
+                  <span>솜솜,숙, 강지호, </span>
+                </div>
+                <!-- </a> -->
+              </div>
+            </div>
+            <div class="friend_party-profile">
+              <div class="friend_party-profile_wrap">
+                <!-- <a href="../chatting/index.html"> -->
+                <div class="friend_party-profile_img">
+                  <img src="../img/user/29.jpg" alt="테스트 이미지" />
+                  <img src="../img/user/30.jpg" alt="테스트 이미지" />
+                  <img src="../img/user/31.jpg" alt="테스트 이미지" />
+                  <img src="../img/user/32.jpg" alt="테스트 이미지" />
+                </div>
+                <div class="profile-name">
+                  <span>토마토이메이진</span>
+                </div>
+                <!-- </a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 생일인 친구 -->
+        <div class="friend_birthday">
+          <div class="friend_title">
+            <p>생일인 친구</p>
+          </div>
+
+          <div class="friend_birthday-wrap">
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                  <!-- <a href="../userProfile/index.html"> -->
+                  <img src="../img/user/14.jpg" alt="테스트 이미지" />
+                  <!-- </a> -->
+                </div>
+                <div class="profile-name">
+                  <span>정솜솜</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                  <!-- <a href="../userProfile/index.html"> -->
+                  <img src="../img/user/15.jpg" alt="테스트 이미지" />
+                  <!-- </a> -->
+                </div>
+                <div class="profile-name">
+                  <span>Luna</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile">
+              <div class="profile_wrap">
+                <div class="profile_img">
+                  <!-- <a href="../userProfile/index.html"> -->
+                  <img src="../img/user/16.jpg" alt="테스트 이미지" />
+                  <!-- </a> -->
+                </div>
+                <div class="profile-name">
+                  <span>지미나</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span class="line1"></span>
+        <!-- 친구리스트 -->
+        <div class="friend_title">
+          <p>친구</p>
+        </div>
+        <div class="friend_list">
+          <ul>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/KakaoTalk_20220818_170717598.png" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>초롱이</em>
+                    <p>내가 냐옹</p>
+                  </div>
+                </div>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                      <div class="btn_wrap">
+                        <button class="btn btn6">삭제</button>
+                        <button class="btn btn7">차단</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/31.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>진달래</em>
+                    <p>사진을 보냈습니다.</p>
+                  </div>
+                </div>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                      <div class="btn_wrap">
+                        <button class="btn btn6">삭제</button>
+                        <button class="btn btn7">차단</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/30.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>우연히</em>
+                    <p>어디로?</p>
+                  </div>
+                </div>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                      <div class="btn_wrap">
+                        <button class="btn btn6">삭제</button>
+                        <button class="btn btn7">차단</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/25.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>kikii jo</em>
+                    <p>이모티콘을 보냈습니다.</p>
+                  </div>
+                </div>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                      <div class="btn_wrap">
+                        <button class="btn btn6">삭제</button>
+                        <button class="btn btn7">차단</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/12.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>아이U</em>
+                    <p>Into the I-LAND</p>
+                  </div>
+                </div>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                      <div class="btn_wrap">
+                        <button class="btn btn6">삭제</button>
+                        <button class="btn btn7">차단</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/19.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>나연</em>
+                    <p>내가 나연</p>
+                  </div>
+                </div>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                      <div class="btn_wrap">
+                        <button class="btn btn6">삭제</button>
+                        <button class="btn btn7">차단</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/18.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>정국이</em>
+                    <p>작은 것들을 위한 시</p>
+                  </div>
+                </div>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                      <div class="btn_wrap">
+                        <button class="btn btn6">삭제</button>
+                        <button class="btn btn7">차단</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/22.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>미나</em>
+                    <p>TT</p>
+                  </div>
+                </div>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                      <div class="btn_wrap">
+                        <button class="btn btn6">삭제</button>
+                        <button class="btn btn7">차단</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/30.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>다니엘</em>
+                    <p>Attention</p>
+                  </div>
+                </div>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">
+                      <div class="btn_wrap">
+                        <button class="btn btn6">삭제</button>
+                        <button class="btn btn7">차단</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- 프로필페이지 -->
+    <section class="section-userProfile section dis-none">
+      <div class="content">
+        <div class="userProfile-modal-close">
+          <button onclick="back()"></button>
+        </div>
+        <div class="userInfo">
+          <div class="user_img">
+            <img src="../img/KakaoTalk_20220818_170717598.png" alt="" />
+            <button class="yeonpil_icon"></button>
+          </div>
+          <div class="user_name">
+            <em>초롱이</em>
+          </div>
+        </div>
+        <span class="line2"></span>
+        <div class="icon_wrap">
+          <ul>
+            <li>
+              <button class="icon_box " onclick="chatting()">
+                <div class="icon"></div>
+                <em>채팅</em>
+              </button>
+            </li>
+            <!-- <li>
+              <button class="icon_box">
+                <div class="icon"></div>
+                <em>전화걸기</em>
+              </button>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- 내 프로필 -->
+    <section class="section-myProfile section dis-none ">
+      <div class="content">
+        <div class="userProfile-modal-close">
+          <button onclick="myback()"></button>
+        </div>
+        <div class="userInfo">
+          <div class="user_img">
+            <img src="../img/user/1.jpg" alt="" />
+            <button class="yeonpil_icon"></button>
+          </div>
+          <div class="user_name">
+            <em>솜솜이</em>
+          </div>
+        </div>
+        <span class="line2"></span>
+        <div class="icon_wrap">
+          <ul>
+            <li>
+              <button class="icon_box " onclick="chatting()">
+                <div class="icon"></div>
+                <em>채팅</em>
+              </button>
+            </li>
+            <!-- <li>
+              <button class="icon_box">
+                <div class="icon"></div>
+                <em>전화걸기</em>
+              </button>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- 채팅 목록 -->
+    <section class="section-chattinglist section dis-none">
+      <div class="friend_wrap">
+        <div class="friend_list">
+          <ul>
+            <li class="section-chattinglist-li">
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img
+                      src="../img/KakaoTalk_20220818_170717598.png"
+                      alt="테스트 이미지"
+                    />
+                  </div>
+                  <div class="profile_name">
+                    <em>Meow</em>
+                    <p>세상</p>
+                  </div>
+                </div>
+                <div class="time">
+                  <p>오전 3:52</p>
+                </div>
+              </div>
+            </li>
+            <li class="section-chattinglist-li">
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/2.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>빈즈</em>
+                    <p>이모티콘을 보냈습니다.</p>
+                  </div>
+                </div>
+                <div class="time">
+                  <p>오전 3:52</p>
+                </div>
+              </div>
+            </li>
+            <li class="section-chattinglist-li">
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/3.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>김지민</em>
+                    <p>오늘 할 수 있는 일을 내일로 미루지말라</p>
+                  </div>
+                </div>
+                <div class="time">
+                  <p>오전 3:52</p>
+                </div>
+              </div>
+            </li>
+            <li class="section-chattinglist-li">
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="friend_party-profile_img">
+                    <img src="../img/user/1.jpg" alt="테스트 이미지" />
+                    <img src="../img/user/2.jpg" alt="테스트 이미지" />
+                    <img src="../img/user/3.jpg" alt="테스트 이미지" />
+                    <img src="../img/user/4.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>Luna, B플러스, 모모, 트와이스</em>
+                    <p>강지호님이 입장하셨습니다.</p>
+                  </div>
+                </div>
+                <div class="time">
+                  <p>오전 3:52</p>
+                </div>
+              </div>
+            </li>
+            <li class="section-chattinglist-li">
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/5.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>윌터너</em>
+                    <p>배고파</p>
+                  </div>
+                </div>
+                <div class="time">
+                  <p>오전 3:52</p>
+                </div>
+              </div>
+            </li>
+            <li class="section-chattinglist-li">
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="friend_party-profile_img">
+                    <img src="../img/user/1.jpg" alt="테스트 이미지" />
+                    <img src="../img/user/2.jpg" alt="테스트 이미지" />
+                    <img src="../img/user/3.jpg" alt="테스트 이미지" />
+                    <img src="../img/user/4.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>세상에게</em>
+                    <p>환영합니다</p>
+                  </div>
+                </div>
+                <div class="time">
+                  <p>오후 5:52</p>
+                </div>
+              </div>
+            </li>
+            <li class="section-chattinglist-li">
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/7.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>간달프</em>
+                    <p>모든 사람들이 자기가 결정하지 않은 그런 일을 겪게 된단다</p>
+                  </div>
+                </div>
+                <div class="time">
+                  <p>오전 3:52</p>
+                </div>
+              </div>
+            </li>
+            <li class="section-chattinglist-li">
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/8.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>페퍼포츠</em>
+                    <p>어디로 갈까?</p>
+                  </div>
+                </div>
+                <div class="time">
+                  <p>오전 3:52</p>
+                </div>
+              </div>
+            </li>
+            <li class="section-chattinglist-li">
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/9.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>헤르미온느</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="time">
+                  <p>오전 3:52</p>
+                </div>
+              </div>
+            </li>
+            <li class="section-chattinglist-li">
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/1.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>진</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="time">
+                  <p>오전 3:52</p>
+                </div>
+              </div>
+            </li>
+            <li class="section-chattinglist-li">
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/10.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>호크아이</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="time">
+                  <p>오전 3:52</p>
+                </div>
+              </div>
+            </li>
+            <li class="section-chattinglist-li">
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/11.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>마리오</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="time">
+                  <p>오전 3:52</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+<!-- 친구초대 -->
+    <section class="section-invite section dis-none">
+      <div class="friend_wrap">
+        <div class="friend_list">
+          <ul>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img
+                      src="../img/KakaoTalk_20220818_170717598.png"
+                      alt="테스트 이미지"
+                    />
+                  </div>
+                  <div class="profile_name">
+                    <em>정가을</em>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn5">10P 초대</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/1.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>솜솜이</em>
+                    <p>내가 솜솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn33">초대 취소</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/2.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>해리</em>
+                    <p>즐거운 날</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn5">100P 초대</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/3.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>미나</em>
+                    <p>어디로?</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn5">100P 초대</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/21.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>다현</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn33">초대 취소</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/4.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>우연히</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn33">초대 취소</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/5.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>모모</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn5">100P 초대</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/28.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>뉴진스</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn5">100P 초대</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/30.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>아이들</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn5">100P 초대</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/8.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>솜솜이</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn5">100P 초대</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/9.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>솜솜이</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn5">100P 초대</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/10.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>솜솜이</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn5">100P 초대</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/11.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>솜솜이</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn btn5">100P 초대</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- 채팅창  -->
+    <section class="section-chatting section main green dis-none">
+      <ul>
+        <li>
+          <div class="user">
+            <div class="user_img profile_img">
+              <img
+                src="../img/KakaoTalk_20220818_170717598.png"
+                alt="테스트 이미지"
+              />
+            </div>
+            <div class="message_wrap">
+              <div class="user_name">
+                <em>Meow</em>
+              </div>
+              <div class="message green">
+                <p>
+                  우리 다시 만날래
+                  예쁘게 빛나던
+                  모든 추억들이 너무 그리워
+                </p>
+                <div class="time_wrap">
+                  <em class="count">확인</em>
+                  <p>오전 11:26</p>
+                  <p class="time">1분 32초전</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="user my_user">
+            <div class="message_wrap">
+              <div class="message">
+                <div class="time_wrap">
+                  <em class="count">확인</em>
+                  <p>오전 11:26</p>
+                  <p class="time">2분 52초전</p>
+                </div>
+                <p>
+                  너의 품에 안길래
+                  이 밤이 새도록
+                  네게 말할 거야 너를 좋아한다고
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <div class="alert">
+          <p>내용이 변경되었습니다.</p>
+        </div>
+
+        <li>
+          <div class="user">
+            <div class="user_img profile_img">
+              <img
+                src="../img/KakaoTalk_20220818_170717598.png"
+                alt="테스트 이미지"
+              />
+            </div>
+            <div class="message_wrap">
+              <div class="user_name">
+                <em>Meow</em>
+              </div>
+              <div class="message green">
+                <p>
+                  안녕 그대야
+                  요즘 어떻게 지내
+                  가로수길 걷다가 생각이 나서
+                </p>
+                <div class="time_wrap">
+                  <em class="count">확인</em>
+                  <p>오전 11:26</p>
+                  <p class="time">3분 12초전</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="user">
+            <div class="user_img profile_img">
+              <img
+                src="../img/KakaoTalk_20220818_170717598.png"
+                alt="테스트 이미지"
+              />
+            </div>
+            <div class="message_wrap">
+              <div class="user_name">
+                <em>Meow</em>
+              </div>
+              <div class="message green">
+                <p>
+                  행복해 보이는 사람들 속에
+                  우리 둘만 없어서
+                  어색했었어
+                </p>
+                <div class="time_wrap">
+                  <em class="count">확인</em>
+                  <p>오전 11:26</p>
+                  <p class="time">3분 12초전</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <div class="alert">
+          <p>내용을 변경하였습니다..</p>
+        </div>
+        <li class="chatting-ad">
+          <a href="" target="_blank"><img src="../img/ad/chatting-ad.png" alt=""></a>
+        </li>
+        <li>
+          <div class="user my_user">
+            <div class="message_wrap">
+              <div class="message">
+                <div class="time_wrap">
+                  <em class="count">확인</em>
+                  <p>오전 11:25</p>
+                  <p class="time">2분 59초전</p>
+                </div>
+                <p>
+                  늘 집에 갈 땐
+                  항상 뒤돌아보면
+                  날 보며 웃어주던
+                  네가 생각났어
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="chat-content">
+          <div class="user">
+            <div class="user_img profile_img">
+              <img
+                src="../img/KakaoTalk_20220818_170717598.png"
+                alt="테스트 이미지"
+              />
+            </div>
+            <div class="message_wrap">
+              <div class="user_name">
+                <em>Meow</em>
+              </div>
+              <div class="message green">
+                <p>우리 다시 만날래
+                  예쁘게 빛나던
+                  모든 추억들이 너무 그리워</p>
+                <div class="time_wrap">
+                  <em class="count">확인</em>
+                  <p>오전 11:26</p>
+                  <p class="time">3분 12초전</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <!-- 친구 추가 /////////////////////////////////////////////////////// -->
+    <section class="section-chatting-add section dis-none">
+      <div class="friend_wrap">
+        <div class="friend_list">
+          <ul>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img
+                      src="../img/KakaoTalk_20220818_170717598.png"
+                      alt="테스트 이미지"
+                    />
+                  </div>
+                  <div class="profile_name">
+                    <em>정가을</em>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/1.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>솜솜이</em>
+                    <p>내가 솜솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/2.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>해리</em>
+                    <p>즐거운 날</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/3.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>미나</em>
+                    <p>어디로?</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/21.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>다현</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/4.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>우연히</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/5.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>모모</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/28.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>뉴진스</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/30.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>아이들</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/8.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>솜솜이</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/9.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>솜솜이</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/10.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>솜솜이</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="profile">
+                <div class="profile_wrap">
+                  <div class="profile_img">
+                    <img src="../img/user/11.jpg" alt="테스트 이미지" />
+                  </div>
+                  <div class="profile_name">
+                    <em>솜솜이</em>
+                    <p>내가 솜솜</p>
+                  </div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="btn invtiebtn">+ 채팅추가</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+<!-- 채팅방 하단 -->
+      <div class="chatting_input_wrap dis-none">
+        <form action="" id="chatInput">
+          <div class="chatting_input_plusicon">+</div>
+          <input id="input" type="text" placeholder="메세지를 입력하세요!" />
+          <button class="inputBtn" onclick="chatting_inputBtn()" id="send">전송</button>
+        </form>
+         
+        <aside class="plus_nav">
+          <ul>
+            <li>
+              <div class="icon"></div>
+            </li>
+            <li>
+              <div class="icon"></div>
+            </li>
+            <li>
+              <div class="icon"></div>
+            </li>
+            <li>
+              <div class="icon"></div>
+            </li>
+            <li>
+              <div class="icon"></div>
+            </li>
+            <li>
+              <div class="icon"></div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+    <!-- 메세지 확인한 친구들 -->
+    <article class="chatting_check_popup">
+      <div class="list">
+        <h2>채팅확인</h2>
+        <ul>
+          <li><em>미스조</em></li>
+          <li><em>솜솜이</em></li>
+          <li><em>혜리</em></li>
+          <li><em>스미미미</em></li>
+          <li><em>미스조</em></li>
+        </ul>
+      </div>
+    </article>
+    <!-- 친구초대 모달창 -->
+
+    <div class="modal1 hidden">
+      <div class="modal_background"></div>
+      
+      <div class="madal_content">
+        <h1>초대하시겠습니까?</h1>
+        
+          <div class="inv_btn_warp">
+            <button class="invbtn yesbtn">예</button>
+            <button class="invbtn nobtn">아니요</button>
+          </div>
+        </div>
+      </div>
+      <!-- 채팅방 설정창 -->
+      <article class="new_chatting_container">
+        <div class="new_chatting">
+          <div class="title">
+            <div class="close"></div>
+            <h2>현재 채팅방 설정</h2>
+          </div>
+          
+          <div class="chatting_line"></div>
+          <div class="chatting_name">
+            <input type="text" placeholder="채팅방 이름을 입력해주세요!" /> <button class="renamebtn">이름변경</button>
+          </div>
+          <div class="chatting_time">
+            <em>채팅방 시간 설정</em>
+            <div class="set_time">
+              <p class="time_text">1 시간</p> 
+              
+              <div class="bottom_icon"></div>
+              <div class="deletemsg"><h2>메세지 자동삭제</h2></div>
+              <div class="time_list">
+                <ul>
+                  <li><p>3 분</p></li>
+                  <li><p>30 분</p></li>
+                  <li><p>1 시간</p></li>
+                  <li><p>해제</p></li>
+                </ul>
+              </div>
+            </div>
+           
+            <em>설정된 시간이 경과되면 자동으로 채팅방이 사라집니다!</em>
+          </div>
+          <div class="chatting_backimg">
+
+            <h2>채팅방 배경화면</h2>
+            <div class="chatting-color-btn">
+              <button onclick="ChattingColorReset()">처음</button>
+              <button onclick="changeColor(`green`)"></button>
+              <button onclick="changeColor(`dark`)"></button>
+              <button onclick="changeColor(`blue`)"></button>
+            </div>
+          </div>
+          <div class="chatting_alert">
+            <em>채팅방 알림음</em>
+          </div>
+          <div class="chatting_add">
+            
+              <button class="chatting-setting-ok">
+                <em>확인</em>
+              </button>
+            </a>
+          </div>
+        </div>
+      </article>
+          <!-- 설정 세션  -->
+    <section class="section-tsetting section dis-none">
+      <div class="friend-management">
+        <div class="friend-managementwarp">
+          <span >친구관리</span>
+        </div>
+          <div class="block-friendwarp">
+              <span class="block-friend">차단 친구 관리</span>
+          </div>
+      </div>
+    <div class="alert-warp">
+        <span>채팅알림</span>
+        <div class="alertbtn">
+          <input type="checkbox" id="checkbox" checked>
+          <label for="checkbox"><span></span></label>
+
+        </div>
+
+    </div>
+    <div class="chatting-backcolor">
+      <span>채팅방 배경 색상</span>
+  </div>
+    </section>
+    <!-- 푸터 /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <footer class="footer_nav">
+      <ul>
+        <!-- <a class="home">
+          <li>
+            <div class="icon_box">
+              <div class="icon">
+                <div class="image"></div>
+              </div>
+              <em class="icon_text"></em>
+            </div>
+          </li>
+        </a> -->
+        <a  class="search" onclick="kikitalk()">
+          <li>
+            <div class="icon_box">
+              <div class="icon">
+                <div class="image"></div>
+              </div>
+              <em class="icon_text"></em>
+            </div>
+          </li>
+        </a>
+        <a class="talk_list" onclick="chattingList()">
+          <li>
+            <div class="icon_box">
+              <div class="icon">
+                <div class="image"></div>
+              </div>
+              <em class="icon_text"></em>
+            </div>
+          </li>
+        </a>
+      </ul>
+    </footer>
+
+    <!-- <? include "../footerNav/index.html";?>
+    <? include "../chattingSetting/index.html";?> -->
+    <!-- 제이쿼리 js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 제이쿼리UI js -->
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/script.js"></script>
+
+  </body>
+</html>
